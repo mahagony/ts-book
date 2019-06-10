@@ -12,6 +12,6 @@ const $main = document.querySelector("#main");
 if ($main) {
     $main.innerHTML = `
         <p>2 + 3 = ${addResult}<p>
-        <p>2 + 3 = ${powResult}<p>
+        <p>2 ^ 3 = ${powResult}<p>
     `;
 }
