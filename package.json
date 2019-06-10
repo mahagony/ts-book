@@ -4,10 +4,11 @@
   "description": "My TypeScript book examples",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --require ts-node/register **/*.test.ts",
     "lint": "tslint --project tsconfig.json -c tslint.json ./**/*.ts",
     "gulp": "gulp lint",
-    "nyc": "nyc --clean --all -x webpack.config.js -x public -x dist -x globals.js -x gulpfile.js --require ts-node/register --extension .ts -- mocha --timeout 5000 **/*.test.ts"
+    "nyc": "nyc --clean --all -x webpack.config.js -x public -x dist -x globals.js -x gulpfile.js --require ts-node/register --extension .ts -- mocha --timeout 5000 **/*.test.ts",
+    "ts-node": "ts-node ./src/main_server.ts"
   },
   "repository": {
     "type": "git",
