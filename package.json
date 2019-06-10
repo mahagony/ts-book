@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint --project tsconfig.json -c tslint.json ./**/*.ts",
-    "gulp": "gulp lint"
+    "gulp": "gulp lint",
+    "nyc": "nyc --clean --all -x webpack.config.js -x public -x dist -x globals.js -x gulpfile.js --require ts-node/register --extension .ts -- mocha --timeout 5000 **/*.test.ts"
   },
   "repository": {
     "type": "git",
@@ -20,15 +21,21 @@
   "homepage": "https://github.com/mahagony/ts-book#readme",
   "dependencies": {},
   "devDependencies": {
+    "@types/chai": "4.1.7",
+    "@types/mocha": "5.2.7",
     "awesome-typescript-loader": "5.2.1",
+    "chai": "4.2.0",
     "css-loader": "2.1.1",
     "gulp": "4.0.2",
     "gulp-tslint": "8.1.4",
     "mini-css-extract-plugin": "0.7.0",
+    "mocha": "6.1.4",
     "node-sass": "4.12.0",
+    "nyc": "14.1.1",
     "resolve-url-loader": "3.1.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
+    "ts-node": "8.2.0",
     "tslint": "5.17.0",
     "typescript": "3.5.1",
     "webpack": "4.33.0",
